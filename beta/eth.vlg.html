@@ -1,0 +1,3480 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+  
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/fonts/fontawesome-free/css/all.min.css">
+  
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="../assets/css/libs.bundle.css">
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.bundle.css">
+  
+  <!-- Title -->
+  <!-- Primary Meta Tags -->
+  <title>VLG | Computer Vision and Learning Group</title>
+  <meta name="title" content="VLG | Computer Vision and Learning Group">
+  <meta name="description" content="We study computational models that enable machines to perceive and analyze human activities from visual input. We leverage machine learning and optimization techniques to build statistical models of humans and their behaviors. Our goal is to advance algorithmic foundations of scalable and reliable human digitalization, enabling a broad class of real-world applications.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vlg.inf.ethz.ch/">
+  <meta property="og:title" content="VLG | Computer Vision and Learning Group">
+  <meta property="og:description" content="We study computational models that enable machines to perceive and analyze human activities from visual input. We leverage machine learning and optimization techniques to build statistical models of humans and their behaviors. Our goal is to advance algorithmic foundations of scalable and reliable human digitalization, enabling a broad class of real-world applications.">
+  <meta property="og:image" content="https://vlg.inf.ethz.ch/assets/img/VLG-Logo_Screen.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vlg.inf.ethz.ch/">
+  <meta property="twitter:title" content="VLG | Computer Vision and Learning Group">
+  <meta property="twitter:description" content="We study computational models that enable machines to perceive and analyze human activities from visual input. We leverage machine learning and optimization techniques to build statistical models of humans and their behaviors. Our goal is to advance algorithmic foundations of scalable and reliable human digitalization, enabling a broad class of real-world applications.">
+  <meta property="twitter:image" content="https://vlg.inf.ethz.ch/assets/img/VLG-Logo_Screen.png">
+</head>
+
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+  
+      <!-- Brand -->
+      <div class="navbar-brand mw-75">
+        <div class="row gx-0 align-items-center">
+          <div class="col col-sm-auto pe-2">
+            <a href="https://ethz.ch/en.html" target="_blank">
+              <img src="../assets/img/logo/logo-eth.png" class="navbar-brand-img mw-100" alt="...">
+            </a>
+          </div>
+          <div class="col-auto align-self-stretch">
+            <div class="py-2 pe-2 h-100">
+              <div class="h-100 border-right border-dark"></div>
+            </div>
+          </div>
+          <div class="col col-sm-auto">
+            <a href="../index.html">
+              <img src="../assets/img/logo/logo-vlg-text.png" class="navbar-brand-img mw-100" alt="...">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+  
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+  
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+  
+        <!-- Navigation -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../publications/">
+              Publications
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../research/">
+              Research
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../news/">
+              News
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../team/">
+              Team
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../teaching/">
+              Teaching
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+  
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <section data-jarallax="" data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax jarallax" style="background-image: url(../assets/img/MOJO-compressed.jpeg)">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-7 text-center">
+          <!-- Heading -->
+          <h1 class="display-3 fw-bold text-white">Our Publications</h1>
+
+          <!-- Text -->
+          <p class="lead mb-0 text-white-75">
+            Keep up to date with what we're working on!
+          </p>
+        </div>
+      </div>
+      <!-- / .row -->
+    </div>
+    <!-- / .container -->
+    <!-- Shape -->
+    <div class="position-absolute right-0 bottom-0 left-0 py-7 d-none d-md-block">
+      <!-- Button -->
+      <div class="position-absolute center">
+        <a class="btn btn-light btn-rounded-circle lift" data-scroll="" href="#publications">
+          <i class="fe fe-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SHAPE -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-white">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <section class="py-7 py-md-10" id="publications">
+    <div class="container position-static">
+      <div class="row justify-content-center">
+        <!-- 8888 -->
+
+        <div class="col pt-5">
+          <h2 class="text-left">2022 </h2>
+          <hr>
+        </div>
+
+          
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Neural-Point-based-Shape-Modeling-of.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/3dv2022/SkiRT.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Neural-Point-based-Shape-Modeling-of.html">
+
+                          <!-- Heading -->
+                          <h5>Neural Point-based Shape Modeling of Humans in Challenging Clothing</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;&nbsp;<a class="eth-link" href="https://3dvconf.github.io/2022/">International Conference on 3D Vision (3DV 2022)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-39">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Qianli-Ma.html">Qianli Ma</a>, <a href="https://ps.is.mpg.de/person/jyang">Jinlong Yang</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a> and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      The power of point-based digital human representations further unleashed: SkiRT models dynamic shapes of 3D clothed humans including those that wear challenging outfits such as skirts and dresses.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://qianlim.github.io/SkiRT" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2209.06814.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/qianlim/SkiRT" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-39" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-39" aria-expanded="false" aria-controls="collapse-39">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-39" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{SkiRT:3DV:2022,
+  title = {Neural Point-based Shape Modeling of Humans in Challenging Clothing},
+  author = {Ma, Qianli and Yang, Jinlong and Black, Michael J. and Tang, Siyu},
+  booktitle = {2022 International Conference on 3D Vision (3DV)},
+  month = September,
+  year = {2022},
+  nmonth_numeric = {9}}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/EgoBody-Human-Body-Shape-and-Motion-of.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/eccv2022/EgoBody4.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/EgoBody-Human-Body-Shape-and-Motion-of.html">
+
+                          <!-- Heading -->
+                          <h5>EgoBody: Human Body Shape and Motion of Interacting People from Head-Mounted Devices</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://eccv2022.ecva.net/">European Conference on Computer Vision (ECCV 2022) </a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-27">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Siwei-Zhang.html">Siwei Zhang</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Qianli-Ma.html">Qianli Ma</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Dr-Yan-Zhang.html">Yan Zhang</a>,&nbsp;<a target="_blank">Zhiyin Qian</a>,&nbsp;<a href="https://taeinkwon.com/" target="_blank" rel="noopener">Taein Kwon</a>,&nbsp;<a href="https://people.inf.ethz.ch/pomarc/" target="_blank" rel="noopener">Marc Pollefeys</a>,&nbsp;<a href="https://fbogo.github.io/" target="_blank" rel="noopener">Federica Bogo</a>&nbsp;and&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      A large-scale dataset of accurate 3D human body shape, pose and motion of humans interacting in 3D scenes, with multi-modal streams from third-person and egocentric views, captured by Azure Kinects and a HoloLens2.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://sanweiliti.github.io/egobody/egobody.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://github.com/sanweiliti/EgoBody" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                        <a href="https://egobody.ethz.ch/" target="_blank" class="btn btn-warning btn-xs fw-normal">Dataset <i class="fa-solid fa-code"></i></a> 
+                          <a href="https://codalab.lisn.upsaclay.fr/competitions/6351" target="_blank" class="btn btn-warning btn-xs fw-normal">Challenge <i class="fe fe-external-link"></i></a> 
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-27" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-27" aria-expanded="false" aria-controls="collapse-27">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-27" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Zhang:ECCV:2022,
+   title = {EgoBody: Human Body Shape and Motion of Interacting People from Head-Mounted Devices},
+   author = {Zhang, Siwei and Ma, Qianli and Zhang, Yan and Qian, Zhiyin and Kwon, Taein and Pollefeys, Marc and Bogo, Federica and Tang, Siyu},
+   booktitle = {European conference on computer vision (ECCV)},
+   month = oct,
+   year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/KeypointNeRF-Generalizing-Image-based.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/eccv2022/keypointnerf_overview.gif" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/KeypointNeRF-Generalizing-Image-based.html">
+
+                          <!-- Heading -->
+                          <h5>KeypointNeRF: Generalizing Image-based Volumetric Avatars using Relative Spatial Encoding of Keypoints</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://eccv2022.ecva.net/">European Conference on Computer Vision (ECCV 2022) </a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-30">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Marko-Mihajlovic.html" target="_blank" rel="noopener">Marko Mihajlovic</a>,&nbsp;&nbsp;<a href="http://www.cs.cmu.edu/~aayushb/" target="_blank" rel="noopener">Aayush Bansal</a>,&nbsp;&nbsp;<a href="https://zollhoefer.com/" target="_blank" rel="noopener">Michael Zollhoefer</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html" target="_blank" rel="noopener">Siyu Tang</a>,&nbsp;&nbsp;<a href="http://www-scf.usc.edu/~saitos/" target="_blank" rel="noopener">Shunsuke Saito</a></p>
+                      KeypointNeRF is a generalizable neural radiance field for virtual avatars.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://markomih.github.io/KeypointNeRF/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/abs/2205.04992" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/facebookresearch/KeypointNeRF" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-30" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-30" aria-expanded="false" aria-controls="collapse-30">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-30" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Mihajlovic:KeypointNeRF:ECCV2022,
+  title = {{KeypointNeRF}: Generalizing Image-based Volumetric Avatars using Relative Spatial Encoding of Keypoints},
+  author = {Mihajlovic, Marko and Bansal, Aayush and Zollhoefer, Michael and Tang, Siyu and Saito, Shunsuke},
+  booktitle={European conference on computer vision},
+  year={2022},
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/ARAH-Animatable-Volume-Rendering-of.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/eccv2022/ARAH_hstack.gif" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/ARAH-Animatable-Volume-Rendering-of.html">
+
+                          <!-- Heading -->
+                          <h5>ARAH: Animatable Volume Rendering of Articulated Human SDFs</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://eccv2022.ecva.net/">European Conference on Computer Vision (ECCV 2022) </a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-29">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Shaofei-Wang.html">Shaofei Wang</a>,&nbsp;&nbsp;<a href="https://katjaschwarz.github.io/" target="_blank" rel="noopener">Katja Schwarz</a>,&nbsp;&nbsp;<a href="http://www.cvlibs.net/" target="_blank" rel="noopener">Andreas Geiger</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      Given sparse multi-view videos, ARAH learns animatable clothed human avatars that have detailed pose-dependent geometry/appearance and generalize to out-of-distribution poses.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://neuralbodies.github.io/arah/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://drive.google.com/file/d/10yCrdOadwKNiDQBni23_W03ZwVafkfCJ/view" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/taconite/arah-release" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-29" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-29" aria-expanded="false" aria-controls="collapse-29">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-29" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@InProceedings{ARAH:ECCV:2022,
+  title = {ARAH: Animatable Volume Rendering of Articulated Human SDFs},
+  author = {Shaofei Wang and Katja Schwarz and Andreas Geiger and Siyu Tang},
+  booktitle = {European Conference on Computer Vision},
+  year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/COINS-Compositional-Human-Scene.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/eccv2022/COINS.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/COINS-Compositional-Human-Scene.html">
+
+                          <!-- Heading -->
+                          <h5>COINS: Compositional Human-Scene Interaction Synthesis with Semantic Control</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://eccv2022.ecva.net/">European Conference on Computer Vision (ECCV 2022) </a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-28">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Kaifeng-Zhao.html">Kaifeng Zhao</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Shaofei-Wang.html">Shaofei Wang</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Dr-Yan-Zhang.html">Yan Zhang</a>,&nbsp;&nbsp;<a href="https://thabobeeler.com/" target="_blank" rel="noopener">Thabo Beeler</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      Synthesizing natural interactions between virtual humans and their 3D environments is critical for numerous applications, such as computer games and AR/VR experiences. We propose COINS, for COmpositional INteraction Synthesis with Semantic Control.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://zkf1997.github.io/COINS/index.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/abs/2207.12824" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/zkf1997/COINS" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-28" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-28" aria-expanded="false" aria-controls="collapse-28">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-28" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Zhao:ECCV:2022,
+  title = {Compositional Human-Scene Interaction Synthesis with Semantic Control},
+  author = {Zhao, Kaifeng and Wang, Shaofei and Zhang, Yan and Beeler, Thabo and and Tang, Siyu},
+  booktitle = {European conference on computer vision (ECCV)},
+  month = oct,
+  year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/SAGA-Stochastic-Whole-Body-Grasping.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/eccv2022/saga.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/SAGA-Stochastic-Whole-Body-Grasping.html">
+
+                          <!-- Heading -->
+                          <h5>SAGA: Stochastic Whole-Body Grasping with Contact</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://eccv2022.ecva.net/">European Conference on Computer Vision (ECCV 2022) </a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-26">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://wuyan01.github.io" target="_blank" rel="noopener">Yan Wu*</a>,&nbsp;<a href="https://jiahaoplus.github.io//" target="_blank" rel="noopener">Jiahao Wang*</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Dr-Yan-Zhang.html">Yan Zhang</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Siwei-Zhang.html">Siwei Zhang</a>,&nbsp;<a href="https://ait.ethz.ch/people/hilliges/" target="_blank" rel="noopener">Otmar Hilliges</a>,&nbsp;<a href="https://www.yf.io/" target="_blank" rel="noopener">Fisher Yu</a>&nbsp;and&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> <br>(* denotes equal contribution)</p>
+                      Our goal is to synthesize whole-body grasping motion. Given a 3D object, we aim to generate diverse and natural whole-body human motions that approach and grasp the object.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://jiahaoplus.github.io/SAGA/saga.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/abs/2112.10103" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/JiahaoPlus/SAGA" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-26" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-26" aria-expanded="false" aria-controls="collapse-26">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-26" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{wu2022saga,
+   title = {SAGA: Stochastic Whole-Body Grasping with Contact},
+   author = {Wu, Yan and Wang, Jiahao and Zhang, Yan and Zhang, Siwei and Hilliges, Otmar and Yu, Fisher and Tang, Siyu},
+   booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+   year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+             
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/COAP-Compositional-Articulated.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2022/coap.gif" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/COAP-Compositional-Articulated.html">
+
+                          <!-- Heading -->
+                          <h5>COAP: Compositional Articulated Occupancy of People</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="http://cvpr2022.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2022)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-24">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Marko-Mihajlovic.html" target="_blank" rel="noopener">Marko Mihajlovic</a>&nbsp;,&nbsp;<a href="http://www-scf.usc.edu/~saitos/" target="_blank" rel="noopener">Shunsuke Saito</a>&nbsp;,&nbsp;<a href="http://www.cs.cmu.edu/~aayushb/" target="_blank" rel="noopener">Aayush Bansal</a>&nbsp;,&nbsp;<a href="http://www.cs.cmu.edu/~aayushb/" target="_blank" rel="noopener">Michael Zollhoefer</a>&nbsp;&nbsp;and&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html" target="_blank" rel="noopener">Siyu Tang</a></p>
+                      COAP is a novel neural implicit representation for articulated human bodies that provides an efficient mechanism for modeling self-contacts and interactions with 3D environments.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://neuralbodies.github.io/COAP/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/abs/2204.06184" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/markomih/COAP" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-24" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-24" aria-expanded="false" aria-controls="collapse-24">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-24" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Mihajlovic:CVPR:2022,
+  title = {{COAP}: Compositional Articulated Occupancy of People},
+  author = {Mihajlovic, Marko and Saito, Shunsuke and Bansal, Aayush and Zollhoefer, Michael and Tang, Siyu},
+  booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  month = jun,
+  year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/The-Wanderings-of-Odysseus-in-3D-Scenes.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2022/gamma.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/The-Wanderings-of-Odysseus-in-3D-Scenes.html">
+
+                          <!-- Heading -->
+                          <h5>The Wanderings of Odysseus in 3D Scenes</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="http://cvpr2022.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2022)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-25">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Dr-Yan-Zhang.html">Yan Zhang</a>,&nbsp;and&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      We propose GAMMA, an automatic and scalable solution, to populate the 3D scene with diverse digital humans. The digital humans have 1) varied body shapes, 2) realistic and perpetual motions to reach goals, and 3) plausible body-ground contact.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://yz-cnsdqz.github.io/eigenmotion/GAMMA/index.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2112.09251.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/yz-cnsdqz/GAMMA-release" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-25" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-25" aria-expanded="false" aria-controls="collapse-25">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-25" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{zhang2022wanderings,
+  title={The Wanderings of Odysseus in 3D Scenes},
+  author={Zhang, Yan and Tang, Siyu},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={20481--20491},
+  year={2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Mover-Human-Aware-Object-Placement-for.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2022/mover.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Mover-Human-Aware-Object-Placement-for.html">
+
+                          <!-- Heading -->
+                          <h5>Mover: Human-Aware Object Placement for Visual Environment Reconstruction</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="http://cvpr2022.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2022)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-21">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://xyyhw.top/" target="_blank" rel="noopener">Hongwei Yi</a>,&nbsp;<a href="https://is.mpg.de/person/chuang2" target="_blank" rel="noopener">Chun-Hao Paul Huang</a>,&nbsp;<a href="https://ps.is.mpg.de/~dtzionas" target="_blank" rel="noopener">Dimitrios Tzionas</a>,&nbsp;<a href="https://ps.is.mpg.de/person/mkocabas" target="_blank" rel="noopener">Muhammed Kocabas</a>,&nbsp;<a href="https://ps.is.mpg.de/person/mhassan" target="_blank" rel="noopener">Mohamed Hassan</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,&nbsp;<a href="https://justusthies.github.io/" target="_blank" rel="noopener">Justus Thies</a>,&nbsp;<a href="https://ps.is.mpg.de/employees/black" target="_blank" rel="noopener">Michael Black</a></p>
+                      Humans are in constant contact with the world as they move through it and interact with it. This contact is a vital source of information for understanding 3D humans, 3D scenes, and the interactions between them.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://mover.is.tue.mpg.de/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2203.03609.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/yhw-yhw/mover" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-21" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-21" aria-expanded="false" aria-controls="collapse-21">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-21" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{yi2022mover,
+  title = {Human-Aware Object Placement for Visual Environment Reconstruction},
+  author = {Yi, Hongwei and Huang, Chun-Hao P. and Tzionas, Dimitrios and Kocabas, Muhammed and 
+  Hassan, Mohamed and Tang, Siyu and Thies, Justus and Black, Michael J.},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+  month = jun,
+  year = {2022},
+  month_numeric = {6}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Context-Aware-Sequence-Alignment-using.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2022/casa.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Context-Aware-Sequence-Alignment-using.html">
+
+                          <!-- Heading -->
+                          <h5>Context-Aware Sequence Alignment using 4D Skeletal Augmentation</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="http://cvpr2022.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2022)</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-22">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://taeinkwon.com/" target="_blank" rel="noopener">Taein Kwon</a>,&nbsp;<a href="https://btekin.github.io/" target="_blank" rel="noopener">Bugra Tekin</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,&nbsp;<a href="https://people.inf.ethz.ch/pomarc/" target="_blank" rel="noopener">Marc Pollefeys</a></p>
+                      Temporal alignment of fine-grained human actions in videos is important for numerous applications in computer vision, robotics, and mixed reality.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://taeinkwon.com/projects/casa/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/abs/2204.12223" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/taeinkwon/casa" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-22" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-22" aria-expanded="false" aria-controls="collapse-22">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-22" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Kwon_CVPR_2022,
+  title = {Context-Aware Sequence Alignment using 4D Skeletal Augmentation},
+  author = {Kwon, Taein and Tekin, Bugra and Tang, Siyu and Pollefeys, Marc},
+  booktitle = {Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Accurate-3D-Body-Shape-Regression-using.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2022/SHAPY.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Accurate-3D-Body-Shape-Regression-using.html">
+
+                          <!-- Heading -->
+                          <h5>Accurate 3D Body Shape Regression using Metric and Semantic Attributes</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="http://cvpr2022.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2022)</a>
+                            <span class="badge bg-primary">oral presentation &amp; best paper finalist</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-23">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://ps.is.mpg.de/person/vchoutas" target="_blank" rel="noopener">Vassilis Choutas</a>,&nbsp;&nbsp;<a href="https://ps.is.mpg.de/person/lmueller2" target="_blank" rel="noopener">Lea Müller</a>,&nbsp;&nbsp;<a href="https://ps.is.mpg.de/person/chuang2" target="_blank" rel="noopener">Chun-Hao Paul Huang</a>,&nbsp;&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,&nbsp;&nbsp;<a href="https://ps.is.mpg.de/person/dtzionas" target="_blank" rel="noopener">Dimitrios Tzionas</a>,&nbsp;&nbsp;<a href="https://ps.is.mpg.de/person/black" target="_blank" rel="noopener">Michael Black</a></p>
+                      We exploit the anthropometric measurements and linguistic shape attributes in several novel ways to train a neural network, called SHAPY, that regresses 3D human pose and shape from an RGB image.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://shapy.is.tue.mpg.de/index.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Choutas_Accurate_3D_Body_Shape_Regression_Using_Metric_and_Semantic_Attributes_CVPR_2022_paper.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/muelea/shapy" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-23" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-23" aria-expanded="false" aria-controls="collapse-23">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-23" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Shapy:CVPR:2022,
+  title = {Accurate 3D Body Shape Regression using Metric and Semantic Attributes},
+  author = {Choutas, Vasileios and M{"u}ller, Lea and Huang, Chun-Hao P. and Tang, Siyu and Tzionas, Dimitrios and Black, Michael J.},
+  booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2022}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        <div class="col pt-5">
+          <h2 class="text-left">2021 </h2>
+          <hr>
+        </div>
+
+           
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/MetaAvatar-Learning-Animatable-Clothed.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/fdf42463-edd3-4b61-9496-a7ea871f8d4a.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/MetaAvatar-Learning-Animatable-Clothed.html">
+
+                          <!-- Heading -->
+                          <h5>MetaAvatar: Learning Animatable Clothed Human Models from Few Depth Images</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a href="https://nips.cc/Conferences/2021">Thirty-​fifth Conference on Neural Information Processing Systems (NeurIPS 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-1">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Shaofei-Wang.html">Shaofei Wang</a>, <a href="../team/Marko-Mihajlovic.html">Marko Mihajlovic</a>, <a href="../team/Qianli-Ma.html">Qianli Ma</a>, <a href="http://www.cvlibs.net/">Andreas Geiger</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      MetaAvatar is meta-learned model that represents generalizable and controllable neural signed distance fields (SDFs) for clothed humans. It can be fast fine-tuned to represent unseen subjects given as few as 8 monocular depth images.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://neuralbodies.github.io/metavatar/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://openreview.net/pdf?id=Q-PA3D1OsDz" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/taconite/MetaAvatar-release" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-1" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-1" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@InProceedings{MetaAvatar:NeurIPS:2021,
+  title = {MetaAvatar: Learning Animatable Clothed Human Models from Few Depth Images},
+  author = {Shaofei Wang and Marko Mihajlovic and Qianli Ma and Andreas Geiger and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {2021}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Learning-to-Disambiguate-Strongly.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/interactive_hands.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Learning-to-Disambiguate-Strongly.html">
+
+                          <!-- Heading -->
+                          <h5>Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-Pixel Part Segmentation</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a href="https://3dv2021.surrey.ac.uk/#:~:text=The%209th%20International%20Conference%20on,3DIMPVT%20for%202011%20and%202012.">International Virtual Conference on 3D Vision (3DV 2021)</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-19">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://ait.ethz.ch/people/zfan" target="_blank" rel="noopener">Zicong Fan</a>,&nbsp;<a href="https://ait.ethz.ch/people/spurra/" target="_blank" rel="noopener">Adrian Spurr</a>,&nbsp;<a href="https://ps.is.tuebingen.mpg.de/person/mkocabas" target="_blank" rel="noopener">Muhammed Kocabas</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,&nbsp;<a href="https://ps.is.tuebingen.mpg.de/person/black" target="_blank" rel="noopener">Michael J. Black</a>&nbsp;and&nbsp;<a href="https://ait.ethz.ch/people/hilliges" target="_blank" rel="noopener">Otmar Hilliges</a></p>
+                      In this paper we demonstrate that self-similarity, and the resulting ambiguities in assigning pixel observations to the respective hands and their parts, is a major cause of the final 3D pose error. Motivated by this insight, we propose DIGIT, a novel method for estimating the 3D poses of two interacting hands from a single monocular image.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://zc-alexfan.github.io/digit#loaded" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2107.00434.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/zc-alexfan/digit-interacting" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-19" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-19" aria-expanded="false" aria-controls="collapse-19">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-19" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inProceedings{fan2021digit,
+  title={Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-pixel Part Segmentation},
+  author={Fan, Zicong and Spurr, Adrian and Kocabas, Muhammed and Tang, Siyu and Black, Michael and Hilliges, Otmar},
+  booktitle={International Conference on 3D Vision (3DV)},
+  year={2021}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/4D-Human-Body-Capture-from-Egocentric.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/4dcapture.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/4D-Human-Body-Capture-from-Egocentric.html">
+
+                          <!-- Heading -->
+                          <h5>4D Human Body Capture from Egocentric Video via 3D Scene Grounding</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a href="https://3dv2021.surrey.ac.uk/#:~:text=The%209th%20International%20Conference%20on,3DIMPVT%20for%202011%20and%202012.">International Virtual Conference on 3D Vision (3DV 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-20">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://aptx4869lm.github.io/" target="_blank" rel="noopener">Miao Liu</a>,&nbsp;Dexin Yang,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Dr-Yan-Zhang.html">Yan Zhang</a>,&nbsp;<a href="https://zhpcui.github.io/" target="_blank" rel="noopener">Zhaopeng Cui</a>,&nbsp;<a href="https://rehg.org/" target="_blank" rel="noopener">James M. Rehg</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      We seek to reconstruct 4D second-person human body meshes that are grounded on the 3D scene captured in an egocentric view. Our method exploits 2D observations from the entire video sequence and the 3D scene context to optimize human body models over time, and thereby leads to more accurate human motion capture and more realistic human-scene interaction.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://aptx4869lm.github.io/4DEgocentricBodyCapture/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2011.13341.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/aptx4869lm/4DCapture-FPV" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-20" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-20" aria-expanded="false" aria-controls="collapse-20">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-20" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{liu20214d,
+  title={4d human body capture from egocentric video via 3d scene grounding},
+  author={Liu, Miao and Yang, Dexin and Zhang, Yan and Cui, Zhaopeng and Rehg, James M and Tang, Siyu},
+  booktitle={2021 International Conference on 3D Vision (3DV)},
+  pages={930--939},
+  year={2021},
+  organization={IEEE}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/HALO-A-Skeleton-Driven-Neural-Occupancy.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/e8143dad-761b-43f6-b037-6173d979607b.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/HALO-A-Skeleton-Driven-Neural-Occupancy.html">
+
+                          <!-- Heading -->
+                          <h5>HALO: A Skeleton-Driven Neural Occupancy Representation for Articulated Hands</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a href="https://3dv2021.surrey.ac.uk/#:~:text=The%209th%20International%20Conference%20on,3DIMPVT%20for%202011%20and%202012.">International Virtual Conference on 3D Vision (3DV 2021)</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-2">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://vlg.inf.ethz.ch/team/Korrawe-Karunratanakul.html">Korrawe Karunratanakul</a>,&nbsp;<a href="https://ait.ethz.ch/people/spurra/" target="_blank" rel="noopener">Adrian Spurr</a>,&nbsp;<a href="https://ait.ethz.ch/people/zfan/" target="_blank" rel="noopener">Zicong Fan</a>,&nbsp;<a href="https://ait.ethz.ch/people/hilliges/" target="_blank" rel="noopener">Otmar Hilliges</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      We present HALO, a neural occupancy representation for articulated hands that produce implicit hand surfaces from input skeletons in a differentiable manner.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://korrawe.github.io/HALO/HALO.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2109.11399.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/korrawe/halo" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-2" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-2" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{karunratanakul2021halo,
+   title={A Skeleton-Driven Neural Occupancy Representation for Articulated Hands},
+   author={Karunratanakul, Korrawe and, Spurr, Adrian and Fan, Zicong and Hilliges, Otmar and Tang, Siyu},
+   booktitle={International Conference on 3D Vision (3DV)},
+   year={2021}
+   }
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/The-Power-of-Points-for-Modeling-Humans.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/d5cc4e9f-efa7-47e1-bb06-3e91e076e9f0.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/The-Power-of-Points-for-Modeling-Humans.html">
+
+                          <!-- Heading -->
+                          <h5>The Power of Points for Modeling Humans in Clothing</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;&nbsp;<a class="eth-link" href="https://iccv2021.thecvf.com/">International Conference on Computer Vision (ICCV 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-3">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Qianli-Ma.html">Qianli Ma</a>, <a href="https://ps.is.mpg.de/person/jyang">Jinlong Yang</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> and <a href="https://ps.is.mpg.de/~black">Michael J. Black</a></p>
+                      We introduce POP — a point-based, unified model for multiple subjects and outfits that can turn a single, static 3D scan into an animatable avatar with natural pose-dependent clothing deformations.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://qianlim.github.io/POP" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2109.01137.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/qianlim/POP" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-3" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-3" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{POP:ICCV:2021,
+title = {The Power of Points for Modeling Humans in Clothing},
+author = {Ma, Qianli and Yang, Jinlong and Tang, Siyu and Black, Michael J.},
+booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+month = oct,
+year = {2021},
+month_numeric = {10}}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Learning-Motion-Priors-for-4D-Human-Body.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/ecd62768-99d1-4efb-84d5-c3437933c65a.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Learning-Motion-Priors-for-4D-Human-Body.html">
+
+                          <!-- Heading -->
+                          <h5>Learning Motion Priors for 4D Human Body Capture in 3D Scenes</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="https://iccv2021.thecvf.com/">International Conference on Computer Vision (ICCV 2021)</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-4">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Siwei-Zhang.html">Siwei Zhang</a>, <a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://fbogo.github.io/">Federica Bogo</a>, <a href="https://people.inf.ethz.ch/pomarc/">Marc Pollefeys</a> and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      LEMO learns motion priors from a larger scale mocap dataset and proposes a multi-​stage optimization pipeline to enable 3D motion reconstruction in complex 3D scenes.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://sanweiliti.github.io/LEMO/LEMO.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2108.10399.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/sanweiliti/LEMO" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-4" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-4" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Zhang:ICCV:2021,
+   title = {Learning Motion Priors for 4D Human Body Capture in 3D Scenes},
+   author = {Zhang, Siwei and Zhang, Yan and Bogo, Federica and Pollefeys Marc and Tang, Siyu},
+   booktitle = {International Conference on Computer Vision (ICCV)},
+   month = oct,
+   year = {2021}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/On-Self-Contact-and-Human-Pose.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/TUCH.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/On-Self-Contact-and-Human-Pose.html">
+
+                          <!-- Heading -->
+                          <h5>On Self-Contact and Human Pose</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="http://cvpr2021.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2021)</a>
+                            <span class="badge bg-primary">oral presentation &amp; best paper finalist</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-18">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://ps.is.tuebingen.mpg.de/employees/lmueller2" target="_blank" rel="noopener">Lea Müller</a>,&nbsp;<a href="https://ps.is.tuebingen.mpg.de/employees/aosman" target="_blank" rel="noopener">Ahmed A. A. Osman</a>,&nbsp;<a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,&nbsp;<a href="https://ps.is.tuebingen.mpg.de/employees/chuang2" target="_blank" rel="noopener">Chun-Hao P. Huang</a>&nbsp;and&nbsp;<a href="https://ps.is.mpg.de/~black" target="_blank" rel="noopener">Michael J. Black</a></p>
+                      we develop new datasets and methods that significantly improve human pose estimation with self-contact.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://tuch.is.tue.mpg.de/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2104.03176.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/muelea/tuch" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-18" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-18" aria-expanded="false" aria-controls="collapse-18">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-18" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">   @inproceedings{Mueller:CVPR:2021,
+  title = {On Self-Contact and Human Pose},
+  author = {M{"u}ller, Lea and Osman, Ahmed A. A. and Tang, Siyu and Huang, Chun-Hao P. and Black, Michael J.},
+  booktitle = {Proceedings IEEE/CVF Conf.~on Computer Vision and Pattern Recognition (CVPR)},
+  month = jun,
+  year = {2021},
+  month_numeric = {6}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/We-are-More-than-Our-Joints-Predicting.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/1d4de544-3696-4f09-949f-382de8bfb70a.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/We-are-More-than-Our-Joints-Predicting.html">
+
+                          <!-- Heading -->
+                          <h5>We are More than Our Joints: Predicting how 3D Bodies Move</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="http://cvpr2021.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-5">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a> and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      "We are more than our joints", or MOJO for short, is a solution to stochastic motion prediction of expressive 3D bodies. Given a short motion from the past, MOJO generates diverse plausible motions in the near future.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://yz-cnsdqz.github.io/eigenmotion/MOJO/index.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2012.00619.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/yz-cnsdqz/MOJO-release" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-5" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-5" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">   @inproceedings{zhang2021mojo,
+      title={We are More than Our Joints: Predicting how 3D Bodies Move},
+      author={Zhang, Yan and Black, Michael J and Tang, Siyu},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      pages={3372--3382},
+      year={2021}
+    }</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/LEAP-Learning-Articulated-Occupancy-of.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/e35b24d8-9010-470f-a86a-d737c83e0992.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/LEAP-Learning-Articulated-Occupancy-of.html">
+
+                          <!-- Heading -->
+                          <h5>LEAP: Learning Articulated Occupancy of People</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="http://cvpr2021.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-6">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Marko-Mihajlovic.html">Marko Mihajlovic</a>, <a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a> and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      LEAP is a neural network architecture for representing volumetric animatable human bodies. It follows traditional human body modeling techniques and leverages a statistical human prior to generalize to unseen humans.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://neuralbodies.github.io/LEAP/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2104.06849.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/neuralbodies/leap" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-6" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-6" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@InProceedings{LEAP:CVPR:21,
+  title = {{LEAP}: Learning Articulated Occupancy of People},
+  author = {Mihajlovic, Marko and Zhang, Yan and Black, Michael J and Tang, Siyu},
+  booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  month = jun,
+  year = {2021},
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Locally-Aware-Piecewise-Transformation.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/205ab5e8-35b8-40bc-bae5-2e5135012eb9.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Locally-Aware-Piecewise-Transformation.html">
+
+                          <!-- Heading -->
+                          <h5>Locally Aware Piecewise Transformation Fields for 3D Human Mesh Registration</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="http://cvpr2021.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-7">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Shaofei-Wang.html">Shaofei Wang</a>, <a href="http://www.cvlibs.net/">Andreas Geiger</a> and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      Registering point clouds of dressed humans to parametric human models is a challenging task in computer vision. We propose novel piecewise transformation fields (PTF), a set of functions that learn 3D translation vectors which facilitates occupancy learning, joint-​rotation estimation and mesh registration.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://taconite.github.io/PTF/website/PTF.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2104.08160.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/taconite/PTF" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-7" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-7" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{PTF:CVPR:2021,
+  author = {Shaofei Wang and Andreas Geiger and Siyu Tang},
+  title = {Locally Aware Piecewise Transformation Fields for 3D Human Mesh Registration},
+  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2021}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/SCALE-Modeling-Clothed-Humans-with-a.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/3fb0231b-d671-492b-bf35-9fc0a7403319.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/SCALE-Modeling-Clothed-Humans-with-a.html">
+
+                          <!-- Heading -->
+                          <h5>SCALE: Modeling Clothed Humans with a Surface Codec of Articulated Local Elements</h5>
+                        </a>
+                        <p>
+                          <strong>Conference</strong>:&nbsp;<a class="eth-link" href="http://cvpr2021.thecvf.com/">Conference on Computer Vision and Pattern Recognition (CVPR 2021)</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-8">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Qianli-Ma.html">Qianli Ma</a>,&nbsp;<a style="text-align: start;" href="http://www-scf.usc.edu/~saitos/">Shunsuke Saito</a><span style="text-align: start;">,&nbsp;</span><a style="text-align: start;" href="https://ps.is.mpg.de/person/jyang">Jinlong Yang</a><span style="text-align: start;">, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> and&nbsp;</span><a style="text-align: start;" href="https://ps.is.mpg.de/~black">Michael J. Black</a></p>
+                      SCALE models 3D clothed humans with hundreds of articulated surface elements, resulting in avatars with realistic clothing that deforms naturally even in the presence of topological change.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://qianlim.github.io/SCALE" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Ma_SCALE_Modeling_Clothed_Humans_with_a_Surface_Codec_of_Articulated_CVPR_2021_paper.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/qianlim/SCALE" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-8" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-8" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Ma:CVPR:2021,
+title = {{SCALE}: Modeling Clothed Humans with a Surface Codec of Articulated Local Elements},
+author = {Ma, Qianli and Saito, Shunsuke and Yang, Jinlong and Tang, Siyu and Black, Michael J.},
+booktitle = {Proceedings IEEE/CVF Conf.~on Computer Vision and Pattern Recognition (CVPR)},
+month = jun,
+year = {2021},
+month_numeric = {6}}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        <div class="col pt-5">
+          <h2 class="text-left">2020 </h2>
+          <hr>
+        </div>
+
+            
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Grasping-Field-Learning-Implicit.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/9c788d6d-ee16-47f6-92e1-ab3090d1e123.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Grasping-Field-Learning-Implicit.html">
+
+                          <!-- Heading -->
+                          <h5>Grasping Field: Learning Implicit Representations for Human Grasps</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a class="eth-link" href="http://3dv2020.dgcv.nii.ac.jp/">International Virtual Conference on 3D Vision (3DV) 2020</a>
+                            <span class="badge bg-primary">oral presentation &amp; best paper</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-9">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Korrawe-Karunratanakul.html">Korrawe Karunratanakul</a>, <a href="https://ps.is.mpg.de/person/jyang">Jinlong Yang</a>, <a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://ps.is.mpg.de/~black">Michael Black</a>, <a href="http://www.krikamol.org/">Krikamol Muandet</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      Capturing and synthesizing hand-​object interaction is essential for understanding human behaviours, and is key to a number of applications including VR/AR, robotics and human-​computer interaction. 
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                       
+                      <a href="https://arxiv.org/pdf/2008.04451.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/korrawe/grasping_field" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-9" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-9" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{karunratanakul2020grasping,
+  title={Grasping field: Learning implicit representations for human grasps},
+  author={Karunratanakul, Korrawe and Yang, Jinlong and Zhang, Yan and Black, Michael J and Muandet, Krikamol and Tang, Siyu},
+  booktitle={2020 International Conference on 3D Vision (3DV)},
+  pages={333--344},
+  year={2020},
+  organization={IEEE}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/PLACE-Proximity-Learning-of.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/73a38162-3b48-4a53-ae8d-ef1fc73d5212.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/PLACE-Proximity-Learning-of.html">
+
+                          <!-- Heading -->
+                          <h5>PLACE: Proximity Learning of Articulation and Contact in 3D Environments</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a class="eth-link" href="http://3dv2020.dgcv.nii.ac.jp/">International Virtual Conference on 3D Vision (3DV) 2020</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-10">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Siwei-Zhang.html">Siwei Zhang</a>, <a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="../team/Qianli-Ma.html">Qianli Ma</a>,&nbsp;<a style="text-align: start;" href="https://ps.is.mpg.de/~black">Michael J. Black</a><span style="text-align: start;">, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></span></p>
+                      Automated synthesis of realistic humans posed naturally in a 3D scene is essential for many applications. In this paper we propose explicit representations for the 3D scene and the person-​scene contact relation in a coherent manner.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://sanweiliti.github.io/PLACE/PLACE.html" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/2008.05570.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/sanweiliti/PLACE" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-10" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-10" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{PLACE:3DV:2020,
+  title = {{PLACE}: Proximity Learning of Articulation and Contact in {3D} Environments},
+  author = {Zhang, Siwei and Zhang, Yan and Ma, Qianli and Black, Michael J. and Tang, Siyu},
+  booktitle = {International Conference on 3D Vision (3DV)},
+  month = nov,
+  year = {2020},
+  month_numeric = {11}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Perpetual-Motion-Generating-Unbounded.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/3504852c-fd47-43cc-bf2f-81b305001d34.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Perpetual-Motion-Generating-Unbounded.html">
+
+                          <!-- Heading -->
+                          <h5>Perpetual Motion: Generating Unbounded Human Motion</h5>
+                        </a>
+                        <p>
+                          <strong>Arxiv</strong>:&nbsp;<a href="https://arxiv.org/pdf/2007.13886.pdf">arXiv preprint arXiv:2007.13886</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-11">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      In this work, our goal is to generate significantly longer, or “perpetual”, motion: given a short motion sequence or even a static body pose, the goal is to generate non-​deterministic ever-​changing human motions in the future.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                       
+                      <a href="https://arxiv.org/pdf/2007.13886.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-11" aria-expanded="false" aria-controls="collapse-11">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Forecasting-Human-Object-Interaction.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/8b44bf62-b1e6-41fe-8cc8-11b0787f764d.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Forecasting-Human-Object-Interaction.html">
+
+                          <!-- Heading -->
+                          <h5>Forecasting Human-Object Interaction: Joint Prediction of Motor Attention and Egocentric Activity</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a class="eth-link" href="https://eccv2020.eu/">European Conference on Computer Vision (ECCV) 2020</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-12">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://aptx4869lm.github.io/#page-top">Miao Liu</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>, <a href="https://www.biostat.wisc.edu/~yli/">Yin Li</a>, and <a href="https://rehg.org/">James M. Rehg</a></p>
+                      We address the challenging task of anticipating human-​object interaction in first person videos. We adopt intentional hand movement as a future representation and propose a novel deep network that jointly models and predicts the egocentric hand motion, interaction hotspots and future action.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://aptx4869lm.github.io/ForecastingHOI/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/1911.10967.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/2020aptx4869lm/Forecasting-Human-Object-Interaction-in-FPV" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-12" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-12" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{liu2019forecasting,
+  title={Forecasting human object interaction: Joint prediction of motor attention and actions in First Person Video},
+  author={Liu, Miao and Tang, Siyu and Li, Yin and Rehg, James},
+  booktitle={ECCV},
+  year={2020}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/ETH-XGaze-A-Large-Scale-Dataset-for.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/1acd7500-ddd1-441d-aa3d-0c73c5eb9361.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/ETH-XGaze-A-Large-Scale-Dataset-for.html">
+
+                          <!-- Heading -->
+                          <h5>ETH-XGaze: A Large Scale Dataset for Gaze Estimation under Extreme Head Pose and Gaze Variation</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a class="eth-link" href="https://eccv2020.eu/">European Conference on Computer Vision (ECCV) 2020</a>
+                            <span class="badge bg-primary">spotlight presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-13">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://www.ccmitss.com/zhang">Xucong Zhang</a>, <a href="https://ait.ethz.ch/people/spark/">Seonwook Park</a>, <a href="https://thabobeeler.com/">Thabo Beeler</a>, <a href="http://zurich.disneyresearch.com/derekbradley/">Derek Bradley</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> , <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a></p>
+                      We propose the ETH-​XGaze dataset: a large scale (over 1 million samples) gaze estimation dataset with high-​resolution images under extreme head poses and gaze directions.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://ait.ethz.ch/projects/2020/ETH-XGaze/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://ait.ethz.ch/projects/2020/ETH-XGaze/downloads/xucongzhang2020eccv.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/xucong-zhang/ETH-XGaze" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-13" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-13" aria-expanded="false" aria-controls="collapse-13">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-13" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{Zhang2020ETHXGaze,
+  author    = {Xucong Zhang and Seonwook Park and Thabo Beeler and Derek Bradley and <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a> and Otmar Hilliges},
+  title     = {ETH-XGaze: A Large Scale Dataset for Gaze Estimation under Extreme Head Pose and Gaze Variation},
+  year      = {2020},
+  booktitle = {European Conference on Computer Vision (ECCV)}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Generating-3D-People-in-Scenes-without.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/4702b7c5-d1b3-4ece-8446-8557f0161028.jpg" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Generating-3D-People-in-Scenes-without.html">
+
+                          <!-- Heading -->
+                          <h5>Generating 3D People in Scenes without People</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a class="eth-link" href="http://cvpr20.com/">Computer Vision and Pattern Recognition (CVPR) 2020</a>
+                            <span class="badge bg-primary">oral presentation</span>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-14">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Dr-Yan-Zhang.html">Yan Zhang</a>, <a href="https://ps.is.mpg.de/person/mhassan">Mohamed Hassan</a>, <a href="https://www.informatik.uni-ulm.de/ni/mitarbeiter/HNeumann/index.html">Heiko Neumann</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      We present a fully-​automatic system that takes a 3D scene and generates plausible 3D human bodies that are posed naturally in that 3D scene.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                       
+                      <a href="https://arxiv.org/pdf/1912.02923.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/yz-cnsdqz/PSI-release" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-14" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-14" aria-expanded="false" aria-controls="collapse-14">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-14" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{PSI:2019,
+  title = {Generating 3D People in Scenes without People},
+  author = {Zhang, Yan and Hassan, Mohamed and Neumann, Heiko and Black, Michael J. and Tang, Siyu},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+  month = jun,
+  year = {2020},
+  url = {https://arxiv.org/abs/1912.02923},
+  month_numeric = {6}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Learning-to-Dress-3D-People-in.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/publications/cvpr2020/CAPE.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Learning-to-Dress-3D-People-in.html">
+
+                          <!-- Heading -->
+                          <h5>Learning to Dress 3D People in Generative Clothing</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:&nbsp;</strong><a class="eth-link" href="http://cvpr2020.thecvf.com/">Computer Vision and Pattern Recognition (CVPR) 2020</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-15">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="../team/Qianli-Ma.html">Qianli Ma</a>, <a href="https://ps.is.mpg.de/person/jyang">Jinlong Yang</a>, <a href="https://anuragranj.github.io/">Anurag Ranjan</a>, <a href="http://morpheo.inrialpes.fr/people/pujades/">Sergi Pujades</a>, <a href="https://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html">Gerard Pons-​Moll</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>, and <a href="https://ps.is.mpg.de/~black">Michael J. Black</a></p>
+                      CAPE is a Graph-CNN based generative model for dressing 3D meshes of human body. It is compatible with the popular body model, SMPL, and can generalize to diverse body shapes and body poses. The CAPE Dataset provides SMPL mesh registration of 4D scans of people in clothing, along with registered scans of the ground truth body shapes under clothing.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://cape.is.tue.mpg.de/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Ma_Learning_to_Dress_3D_People_in_Generative_Clothing_CVPR_2020_paper.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/qianlim/CAPE" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-15" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-15" aria-expanded="false" aria-controls="collapse-15">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-15" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{CAPE:CVPR:20,
+  title = {{Learning to Dress 3D People in Generative Clothing}},
+  author = {Ma, Qianli and Yang, Jinlong and Ranjan, Anurag and Pujades, Sergi and Pons-Moll, Gerard and Tang, Siyu and Black, Michael J.},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+  month = June,
+  year = {2020},
+  month_numeric = {6}}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/Learning-Multi-Human-Optical-Flow.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/2a998ef7-411b-4252-aefd-3e234193e19f.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/Learning-Multi-Human-Optical-Flow.html">
+
+                          <!-- Heading -->
+                          <h5>Learning Multi-Human Optical Flow</h5>
+                        </a>
+                        <p>
+                          <strong>Journal:</strong>&nbsp;<a class="eth-link" href="https://dl.acm.org/journal/ijcv">International Journal of Computer Vision (IJCV) 2019</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-16">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://anuragranj.github.io/">Anurag Ranjan</a>, <a href="https://is.mpg.de/person/dhoffmann">David T. Hoffmann</a>, <a href="https://ps.is.mpg.de/~dtzionas">Dimitrios Tzionas</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>, <a href="https://ps.is.mpg.de/~jromero">Javier Romero</a>, <a href="https://ps.is.mpg.de/~black">Michael J. Black</a></p>
+                      We created an extensive Human Optical Flow dataset containing images of realistic human shapes in motion together with ground truth optical flow.  We then train two compact network architectures based on spatial pyramids, namely SpyNet and PWC-​Net.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                      <a href="https://humanflow.is.tue.mpg.de/" target="_blank" class="btn btn-warning btn-xs fw-normal">Project <i class="fe fe-external-link"></i></a>
+                       
+                      <a href="https://arxiv.org/pdf/1910.11667.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="https://github.com/anuragranj/humanflow2" target="_blank" class="btn btn-warning btn-xs fw-normal">Code <i class="fa-solid fa-code"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-16" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-16" aria-expanded="false" aria-controls="collapse-16">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-16" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@article{MultiHumanflow,
+		title = {Learning Multi-Human Optical Flow},
+		author = {Ranjan, Anurag and Hoffmann, David T. and Tzionas, Dimitrios and Tang, Siyu and Romero, Javier and Black, Michael J.},
+		journal = {International Journal of Computer Vision (IJCV)},
+		month = jan,
+		year = {2020},
+		url = {https://humanflow.is.tue.mpg.de},
+		month_numeric = {1},
+		doi = {10.1007/s11263-019-01279-w},
+		}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         
+
+        <div class="col-12">
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-5">
+
+            <div class="row gx-0">
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-4 align-self-center card-img-start">
+                  <a class="card-img-start" href="../publications/End-to-end-Learning-for-Graph.html">
+                    <div>
+                      <img class="img-fluid" src="../assets/img/saved/86783010-3c2e-4bfc-9fa7-5e5403aabdbb.png" alt="">
+                    </div>
+                  </a>
+              </div>
+
+              <div class="col-12 col-md d-flex flex-column">
+
+                <div class="row g-0 align-items-end">
+                  <div class="col">
+                    <div class="p-4 px-md-6 pb-0">
+
+                        <a href="../publications/End-to-end-Learning-for-Graph.html">
+
+                          <!-- Heading -->
+                          <h5>End-to-end Learning for Graph Decomposition</h5>
+                        </a>
+                        <p>
+                          <strong>Conference:</strong>&nbsp;<a class="eth-link" href="https://iccv2019.thecvf.com/">International Conference on Computer Vision (ICCV) 2019</a>
+                        </p>
+                        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse d-md-flex flex-md-column dont-collapse-md flex-grow-1" id="collapse-17">
+                  <div class="px-4 px-md-6  pt-2 flex-grow-1">
+                    <!-- Text -->
+                    <h6 class="mb-0 text-muted fs-14">
+                      <p><strong>Authors</strong>:&nbsp;<a href="https://ait.ethz.ch/people/song/">Jie Song</a>,&nbsp;<a href="http://www.andres.sc/">Bjoern Andres</a>,&nbsp;<a href="https://ps.is.mpg.de/~black">Michael J. Black</a>,&nbsp;<a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a>, <a href="../team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a></p>
+                      We propose an end-​to-end trainable framework to learn feature representations globally in a graph decomposition problem.
+                      <br>
+                      <br>
+                    </h6>
+                  </div>
+                  <!-- Body -->
+
+                  <!-- Meta -->
+                  <div class="px-4 px-md-6  pb-3 pt-0">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider mb-3">
+
+                    <!-- Date -->
+                    <div class="h6 text-uppercase text-muted mb-0 d-grid gap-2 d-md-flex justify-content-md-end">
+                       
+                      <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Song_End-to-End_Learning_for_Graph_Decomposition_ICCV_2019_paper.pdf" target="_blank" class="btn btn-warning btn-xs fw-normal">PDF <i class="fe fe-book"></i></a>
+                      
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#bibtex-modal-17" class="btn btn-warning btn-xs fw-normal">BibTeX <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="col d-md-none align-self-center" data-bs-toggle="collapse" data-bs-target="#collapse-17" aria-expanded="false" aria-controls="collapse-17">
+                <div>
+                  <div class="p-3 text-center">
+                    <hr>
+                    <i class="fe fe-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade p-0" id="bibtex-modal-17" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h2>BibTeX</h2>
+                <pre class="h6 border rounded bg-light p-2">@inproceedings{song2019end,
+  title={End-to-end learning for graph decomposition},
+  author={Song, Jie and Andres, Bjoern and Black, Michael J and Hilliges, Otmar and Tang, Siyu},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={10093--10102},
+  year={2019}
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+      <!-- / .row -->
+    </div>
+    <!-- / .container -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 pb-5 pt-md-11 bg-black">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 col-md-4 col-lg-3">
+          <!-- Brand -->
+          <div class="row gx-0 align-items-center mb-3">
+            <div class="col pe-2">
+              <a href="https://ethz.ch/en.html" target="_blank">
+                <img src="../assets/img/logo/logo-eth-white.png" class="navbar-brand-img mw-100" alt="...">
+              </a>
+            </div>
+            <div class="col-auto align-self-stretch">
+              <div class="py-2 pe-2 h-100">
+                <div class="h-100 border-right border-white"></div>
+              </div>
+            </div>
+            <div class="col">
+              <a href="../index.html">
+                <img src="../assets/img/logo/logo-vlg-white.png" class="navbar-brand-img mw-100" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <!-- Heading -->
+          <h6 class="fw-bold text-uppercase text-gray-700">Links</h6>
+  
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href=".." class="text-reset"> Home </a>
+            </li>
+            <li class="mb-3">
+              <a href="../publications/" class="text-reset"> Publications </a>
+            </li>
+            <li class="mb-3">
+              <a href="../research/" class="text-reset"> Research </a>
+            </li>
+            <li class="mb-3">
+              <a href="../news/" class="text-reset"> News </a>
+            </li>
+            <li class="mb-3">
+              <a href="../team/" class="text-reset"> Team </a>
+            </li>
+            <li class="mb-3">
+              <a href="../teaching/" class="text-reset"> Teaching </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-auto col-lg">
+          <!-- Heading -->
+          <h6 class="fw-bold text-uppercase text-gray-700">Contact</h6>
+  
+          <div class="text-muted">
+            <small>
+              Prof. Dr. Siyu Tang<br>
+              CNB&nbsp;G&nbsp;104<br>
+              Uni­versitätstrasse 6
+              <br>
+              8092 Zürich<br>
+              Switzer­land
+            </small>
+          </div>
+        </div>
+        <div class="col-6 col-md-auto offset-md-4 offset-lg-0 col-lg">
+          <!-- Heading -->
+          <h6 class="fw-bold text-uppercase text-gray-700">Connect</h6>
+  
+          <!-- List -->
+          <!-- Social -->
+          <ul class="list-unstyled list-inline list-social mb-6 mb-md-0 text-light h3">
+            <li class="list-inline-item list-social-item me-3">
+              <a href="https://www.youtube.com/channel/UC_a7NRHqOsyQtljsk3FT1jg" target="_blank" class="text-decoration-none">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item list-social-item me-3">
+              <a href="https://www.facebook.com/siyu.tang" target="_blank" class="text-decoration-none">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item list-social-item me-3">
+              <a href="https://twitter.com/SiyuTang3" target="_blank" class="text-decoration-none">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item list-social-item">
+              <a href="https://www.linkedin.com/in/siyu-tang-06875324/?originalSubdomain=ch" target="_blank" class="text-decoration-none">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- / .row -->
+      <div class="row pt-5 text-muted text-center border-top border-dark">
+        <div class="col">
+          <small> VLG | Computer Vision and Learning Group © 2022 | Website by: <a href="https://www.ante-agency.com/projects" target="_blank" style="text-decoration: underline;"> ANTE Agency </a></small>
+        </div>
+      </div>
+    </div>
+    <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+  
+  <!-- Vendor JS -->
+  <script src="../assets/js/vendor.bundle.js"></script>
+  
+  <!-- Theme JS -->
+  <script src="../assets/js/theme.bundle.js"></script>
+
+
+</body></html>
