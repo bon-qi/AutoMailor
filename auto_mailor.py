@@ -13,8 +13,10 @@ class AutoMailor(object):
         self.sender = sender
         pass
 
+    ## Robustness
     def send_to(self, receiver: list = ['2308224300@qq.com'],
                 mail_content: str = '自动发送的消息 勿回',
+                content_type:str = 'plain',
                 mail_title: str = "[自动发送 de Qi]"):
         self.smtp = SMTP_SSL(self.host_server)
         self.smtp.login(self.sender, self.pwd)
@@ -23,7 +25,7 @@ class AutoMailor(object):
         message["From"] = self.sender
         message["To"] = ";".join(receiver)
     
-        message.attach(MIMEText(mail_content,'plain','utf-8'))
+        message.attach(MIMEText(mail_content,content_type,'utf-8'))
         self.smtp.sendmail(self.sender, receiver, message.as_string())  
         self.quit()      
         print(f"{fg.yellow}[INFO {get_time()}]{fg.lightgrey} Sent: [",
@@ -37,9 +39,9 @@ if __name__ == "__main__":
     automail_qi = AutoMailor(config.sender, config.pwd, config.host_server)
     for i in range(300):
         automail_qi.send_to(
+            receiver=["2308224300@qq.com"],
             # ["1287974345@qq.com", "2834637388@qq.com", "961850163@qq.com", "2308224300@qq.com"],
-            receiver=["songbr@mail.ustc.edu.cn"],
-            mail_content="[自动发送，请勿回复]你好呀",
+            mail_content="<h1>Hola World!</h1>",
             mail_title="你好呀"
         )
         time.sleep(2)

@@ -1,6 +1,12 @@
 import time
 
-def get_time()->str:
+def extra_keys(keys:list, dic:dict): # get dic[keys] 
+    ret = []
+    for key in keys: 
+        ret.append(dic[key])
+    return ret
+
+def get_time()->str: # get a string of time
     lt = time.localtime()
     return f"{lt.tm_hour}:{lt.tm_min}:{lt.tm_sec}\t{lt.tm_year}-{lt.tm_mon}-{lt.tm_mday}"
 
