@@ -17,7 +17,7 @@ urls_dict = {
 ## Germany && Switherland && British 
     ### Germany
     "mpi.andreas_geiger"    :"https://www.cvlibs.net/publications.php",          ## Andreas Geiger
-    "mpi.vcai"              :"https://vcai.mpi-inf.mpg.de/VCAI_Projects.html",   ## MPI Stuggart
+    "mpi.vcai"              :"https://vcai.mpi-inf.mpg.de/VCAI_Projects.html",   ## MPI Stuggart #/html/body/table[2]/tbody/tr[*]/td[2] (year related)
     "mpi.justus_theis"      :"https://justusthies.github.io/publications/",      ## Justus Thies
     "mpi.michael_black"     :"https://ps.is.mpg.de/publications",                ## Michael J Black
     "mpi.gerard_pons-moll"  :"https://virtualhumans.mpi-inf.mpg.de/publications.html",

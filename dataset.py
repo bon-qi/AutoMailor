@@ -17,6 +17,6 @@ class DatasetJS(object):
             return ret
         except:
             return {}
-
+    ## TODO: make comparsion into DatasetJS
     def compare(self, info):
         info_old = self.read()

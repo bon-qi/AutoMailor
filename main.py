@@ -1,22 +1,27 @@
 import time
-# from tqdm import trange, tqdm
 import requests
 from lxml import etree
-import json
 
 from utils import fg, extra_keys, get_time
 from dataset import DatasetJS
 from auto_mailor import AutoMailor
 import config
 
-def check(author_dict, log):
-    ret = []
-    for name, info in zip(authors_dict.keys(),authors_dict.values()):
+def check(author_dict, proxies=None):
+    ret = dict()
+    for name, info in zip(author_dict.keys(),author_dict.values()):
         # get content and search from it.
-        ## robustness
-        response = requests.get(info["url"])
+       
+        try: ## robustness
+            response = requests.get(info["url"], proxies=proxies)
+        except:
+            print(f"{fg.red}[INFO {get_time()}]{fg.lightgrey} Got {info['url']} failed.")
+            continue
+
         et = etree.HTML(response.content)
         pubs_node = et.xpath(info["xpath"]) 
+        
+        print(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} Got {info['url']}.")
         
         # get them together
         unites_new = dict()
@@ -29,20 +34,20 @@ def check(author_dict, log):
         dataset = DatasetJS(f"./data/{name}.json")
         unites_old = dataset.read()
         if unites_old != unites_new:
-            keys_new = list(set(unites_new.keys()).difference(set(unites_old.keys())))
-            pub_new = extra_keys(keys_new, unites_new)
-            ret.append({name:pub_new})
-            log.append(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has {len(pub_new)} new pub(s).")
+            pub_new = list(set(unites_new.values()).difference(set(unites_old.values())))
+            # pub_new = extra_keys(keys_new, unites_new)
+            ret.update({name:pub_new})
+            print(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has {len(pub_new)} new pub(s).")
             dataset.write(unites_new)
         else:
-            log.append(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has no new pub.")
+            print(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has no new pub.")
     return ret
-##  ret = [ 
-##      { "name" : [ "new_pub1" , "new_pub2" ] }
-##  ]
+##  ret = {
+##       "name" : [ "new_pub1" , "new_pub2" ],
+##  }
 
-def test(authors_dict, log):
-    ret = []
+def test(authors_dict):
+    ret = dict()
     for name, info in zip(authors_dict.keys(),authors_dict.values()):
         
         # get DatasetJS
@@ -51,12 +56,12 @@ def test(authors_dict, log):
         new = new.read()
         old = old.read()
         if new != old:
-            keys_new = list(set(new.keys()).difference(set(old.keys())))
-            pub_new = extra_keys(keys_new, new)
-            ret.append({name:pub_new})
-            log.append(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has {len(pub_new)} new pub(s).")
+            pub_new = list(set(new.values()).difference(set(old.values())))
+            # pub_new = extra_keys(keys_new, new)
+            ret.update({name:pub_new})
+            print(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has {len(pub_new)} new pub(s).")
         else:
-            log.append(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has no new pub.")
+            print(f"{fg.lightblue}[INFO {get_time()}]{fg.lightgrey} {name} has no new pub.")
     return ret
 
 
@@ -65,23 +70,19 @@ if __name__ == "__main__":
     automailor = AutoMailor(config.sender, config.pwd, config.host_server)
 
     while True:
-        time.sleep(5)
-        log = []
-        new_pubs = check(authors_dict, log)
+        time.sleep(10)
+        new_pubs = check(authors_dict, config.proxies)
 
         ## check for new pub
-        if new_pubs != list():
+        if new_pubs != dict() and new_pubs != None:
             message = str()
-            for i, new_pub in enumerate(new_pubs):
-                name = list(new_pub.keys())[0]
-                pubs = list(new_pub.values())[0]
+            for name, pubs in zip(new_pubs.keys(), new_pubs.values()):
                 message += f" <b>{authors_dict[name]['name']}<b>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
                     message += "</br>"
             automailor.send_to( receiver=["2308224300@qq.com"], mail_content=message, 
                                 content_type='html', mail_title="[自动放送] 新情报")            
-            
-        for info in log:
-            print(info)
+
         print(f"{fg.lightgreen}[INFO {get_time()}]{fg.lightgrey} end of one iter")
+        print()
