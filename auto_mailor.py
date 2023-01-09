@@ -40,7 +40,6 @@ if __name__ == "__main__":
     for i in range(300):
         automail_qi.send_to(
             receiver=["2308224300@qq.com"],
-            # ["1287974345@qq.com", "2834637388@qq.com", "961850163@qq.com", "2308224300@qq.com"],
             mail_content="<h1>Hola World!</h1>",
             mail_title="你好呀"
         )

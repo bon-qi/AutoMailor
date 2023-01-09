@@ -17,3 +17,18 @@ proxies = {                                 ## None if you do not need.
 ## TODO: Add header for anti-spider.
 header = "[HEADER]" ## Header if more web settings needed
 ```
+
+### Others 
+1. Sending email: Please see `__main__` of `./AutoMailor/auto_mailor.py` for example.
+2. Preparing for `xpath`: open your webrowser, and right push according to your sellection, `check` it in `F12` mode, and fine-tune your sellection, right click it in `F12` mode, find `copy` and `full xpath` or `xpath` you can see. (`chrome` suggested, `safari` need setting for dev-mode.)
+3. For `xpath`, it can add into `./AutoMailor/url_test.py` in this mode.
+```python
+authors_dict = { 
+    ... # other settings
+    "[AUTHOR_NAME]" : {
+        "name"               : "[YOUR FORMAL NAME IN EMAIL]", ## Example: Mr. Example
+        "url"                : "[ITS WEBSITE]",     ## Example: example.com
+        "xpath"              : "[XPATH]",           ## The Xpath you copied from web-browser, should be like '/html/body/tb[*]'
+    },
+```
+- Tip: browser might add some `*/tbody/*` in your path, which actually not existed, so delete it if needed.
