@@ -11,7 +11,6 @@ def check(author_dict, proxies=None):
     ret = dict()
     for name, info in zip(author_dict.keys(),author_dict.values()):
         # get content and search from it.
-       
         try: ## robustness
             response = requests.get(info["url"], proxies=proxies)
         except:
