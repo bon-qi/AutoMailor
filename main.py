@@ -66,8 +66,10 @@ def test(authors_dict):
 
 if __name__ == "__main__":
     from url_test import authors_dict
+    import os
+    os.mkdir("./data/")
     automailor = AutoMailor(config.sender, config.pwd, config.host_server)
-
+    
     while True:
         time.sleep(10)
         new_pubs = check(authors_dict, config.proxies)
