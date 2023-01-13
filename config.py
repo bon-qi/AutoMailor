@@ -1,7 +1,7 @@
 import os
 
 sender = "automail_qi@163.com"
-pwd = os.environ['SMTP_PWD']
+pwd = 'UMBHTQFENFWNBBGL'
 host_server = "smtp.163.com"
 
 proxies = {
