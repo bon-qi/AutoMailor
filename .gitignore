@@ -2,4 +2,4 @@ data/*
 url_pub.py
 imgui.ini
 key_env.sh
-*/__pycache__/*
+__pycache__/*
