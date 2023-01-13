@@ -33,3 +33,7 @@ authors_dict = {
 ```
 - Tip: browser might add some `*/tbody/*` in your path, which actually not existed, so delete it if needed.
 4. Use github workflows for a free server.
+
+## TODO: 
+1. A `.js` frontend for visualization.
+2. Or a gui (maybe qt or so).
