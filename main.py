@@ -1,3 +1,4 @@
+import os
 import time
 import requests
 from lxml import etree
@@ -6,8 +7,10 @@ from utils import fg, extra_keys, get_time
 from dataset import DatasetJS
 from auto_mailor import AutoMailor
 import config
+from url_test import authors_dict
 
-def check(author_dict, proxies=None):
+
+def check(author_dict, proxies=None,header=None):
     ret = dict()
     for name, info in zip(author_dict.keys(),author_dict.values()):
         # get content and search from it.
@@ -48,7 +51,6 @@ def check(author_dict, proxies=None):
 def test(authors_dict):
     ret = dict()
     for name, info in zip(authors_dict.keys(),authors_dict.values()):
-        
         # get DatasetJS
         new = DatasetJS(f"./data/{name}.json")
         old = DatasetJS(f"./data_test/{name}.json")
@@ -65,25 +67,21 @@ def test(authors_dict):
 
 
 if __name__ == "__main__":
-    from url_test import authors_dict
-    import os
     os.mkdir("./data/")
     automailor = AutoMailor(config.sender, config.pwd, config.host_server)
-    
     while True:
-        time.sleep(10)
-        new_pubs = check(authors_dict, config.proxies)
-
+        time.sleep(60)
+        new_pubs = check(authors_dict, config.proxies, config.header)
         ## check for new pub
         if new_pubs != dict() and new_pubs != None:
             message = str()
             for name, pubs in zip(new_pubs.keys(), new_pubs.values()):
-                message += f" <b>{authors_dict[name]['name']}<b>  has {len(pubs)} pubs,  </br> </br>"
+                message += f" <b style='background-color:#F6CB09'>{authors_dict[name]['name']}<b>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
                     message += "</br>"
-            automailor.send_to( receiver=["2308224300@qq.com"], mail_content=message, 
-                                content_type='html', mail_title="[自动放送] 新情报")            
+            automailor.send_to( receiver=config.receiver, mail_content=message, 
+                                content_type='html', mail_title=config.title)            
 
         print(f"{fg.lightgreen}[INFO {get_time()}]{fg.lightgrey} end of one iter")
         print()

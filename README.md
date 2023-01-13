@@ -18,6 +18,11 @@ proxies = {                                 ## None if you do not need.
 header = "[HEADER]" ## Header if more web settings needed
 ```
 
+### How to use?
+1. Star this project
+2. Fork this project
+3. Change a little on something (push to triger `github workflows`).
+
 ### Others 
 1. Sending email: Please see `__main__` of `./AutoMailor/auto_mailor.py` for example.
 2. Preparing for `xpath`: open your webrowser, and right push according to your sellection, `check` it in `F12` mode, and fine-tune your sellection, right click it in `F12` mode, find `copy` and `full xpath` or `xpath` you can see. (`chrome` suggested, `safari` need setting for dev-mode.)
