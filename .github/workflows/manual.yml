@@ -18,7 +18,8 @@ jobs:
     
     - name: Use Python3.8
       uses: actions/setup-python@v2
-      with: python-version: 3.8
+      with: 
+	    python-version: 3.8
 
     # Runs a single command using the runners shell
     - name: Setup environment
