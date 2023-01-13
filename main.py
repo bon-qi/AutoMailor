@@ -85,4 +85,4 @@ if __name__ == "__main__":
 
         print(f"{fg.lightgreen}[INFO {get_time()}]{fg.lightgrey} end of one iter")
         print()
-        time.sleep(10)
+        time.sleep(120)
