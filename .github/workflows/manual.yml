@@ -4,7 +4,8 @@ name: AutoMailor workflow
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: push
+on:
+  push
   schedule:
     ## '[min] [hour] [day] [month] [weekday]'
     - cron: '0 * * * *'
