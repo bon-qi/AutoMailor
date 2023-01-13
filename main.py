@@ -67,16 +67,16 @@ def test(authors_dict):
 
 
 if __name__ == "__main__":
-    os.mkdir("./data/")
+    if not os.path.exists("./data/"): os.mkdir("./data/")
+
     automailor = AutoMailor(config.sender, config.pwd, config.host_server)
     while True:
-        time.sleep(60)
         new_pubs = check(authors_dict, config.proxies, config.header)
         ## check for new pub
         if new_pubs != dict() and new_pubs != None:
             message = str()
             for name, pubs in zip(new_pubs.keys(), new_pubs.values()):
-                message += f" <b style='background-color:#F6CB09'>{authors_dict[name]['name']}<b>  has {len(pubs)} pubs,  </br> </br>"
+                message += f"<b style='color:#F6CB09'>{authors_dict[name]['name']}<b>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
                     message += "</br>"
@@ -85,3 +85,4 @@ if __name__ == "__main__":
 
         print(f"{fg.lightgreen}[INFO {get_time()}]{fg.lightgrey} end of one iter")
         print()
+        time.sleep(10)
