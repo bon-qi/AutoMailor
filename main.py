@@ -76,7 +76,7 @@ if __name__ == "__main__":
         if new_pubs != dict() and new_pubs != None:
             message = str()
             for name, pubs in zip(new_pubs.keys(), new_pubs.values()):
-                message += f"<b> <span style=\"color:#a51e37\"> {authors_dict[name]['name']} </span>  <b>  has {len(pubs)} pubs,  </br> </br>"
+                message += f"<b> <span style=\"color:#6A00B8\"> {authors_dict[name]['name']} </span>  <b>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
                     message += "</br>"
