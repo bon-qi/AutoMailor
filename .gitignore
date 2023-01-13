@@ -1,4 +1,3 @@
-config.py
 data/*
 url_test.py
 url_pub.py
