@@ -7,8 +7,8 @@ from pathlib import Path
 ## copy the default in library
 def default_config(path:str):
     pwd = Path(__file__).parent.absolute()
-    default_send = f"{pwd}/../examples/config/config_send.json"
-    default_url = f"{pwd}/../examples/config/config_url.json"
+    default_send = f"{pwd}/config/config_send.json"
+    default_url = f"{pwd}/config/config_url.json"
     if not os.path.exists(path): os.mkdir(path)
     copyfile(default_send, f"{path}/config_send.json")
     copyfile(default_url, f"{path}/config_url.json")
