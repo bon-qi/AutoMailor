@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-pip install git+https://github.com/bon-qi/automailor.git
+pip install git+https://github.com/bon-qi/AutoMailor.git
 ```
 
 ## Usage
