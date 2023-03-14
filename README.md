@@ -43,6 +43,7 @@ while True:
 ## Hack
 See the `config_xxx.json` files to hack.
 
+The `config_send.json`,
 ```json
 {
   // sending message
@@ -57,6 +58,7 @@ See the `config_xxx.json` files to hack.
 }
 ```
 
+The `config_url.json`,
 ```json
 { 
   "save_path" : "./data",
