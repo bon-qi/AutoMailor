@@ -1,0 +1,12 @@
+{
+  // sending message
+  "sender" : "automail_qi@163.com",
+  "pwd" : "UMBHTQFENFWNBBGL",
+  "host_server" : "smtp.163.com",
+
+  //About sending message
+  "receiver" : ["2308224300@qq.com"],
+  "mail_title" : "[自动推送] 新的观察",
+  "content_type" : "html"
+
+}
