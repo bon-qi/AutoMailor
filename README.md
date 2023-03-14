@@ -1,48 +1,36 @@
-## The package allow you to monite and send email to any research webpage
+# The package allow you to monite and send email to any research webpage
 
 > Follow the usage below to use it 
 
-### Installation
+## Installation
 
 ```bash
 pip install git+https://github.com/bon-qi/automailor.git
 ```
 
-### Usage
-
-Basically, you can follow how to use from [examples/test.py](./examples/test.py), the main loop of this software is below.
-
-0. Import packages and modules 
+## Usage
+You can learn the usage from [examples/test.py](./examples/test.py), or see below, 
 
 ```python
 from automailor import ( Mailor, Config, Monitor )
 from automailor import default_config
-```
 
-1. set up configs of `Mailor` and `Monitor`, I have made a default setting to you.
+# copy from a example case 
+cfg_send_path, cfg_url_path = default_config("./config")
+cfg_send = Config(cfg_send_path)
+cfg_url = Config(cfg_url_path)
 
-```python
-default_config("./config")
-cfg_send = Config("./config/config_send.json")
-cfg_url = Config("./config/config_url.json")
-```
-
-2. define our `mailor` and `monitor` from config.
-
-```python
+# define our `mailor` and `monitor` from config.
 mailor = Mailor(**cfg_send.dict())
 monitor = Monitor(**cfg_url.dict())
-```
 
-3. Begin the mainloop!
-```python
+# begin the loop to monitor
 monitor.init_check()
 while True:
     message = monitor.compare() # str
     if message != None:
         mailor.send(message)
-    time.sleep(2)
-
+    time.sleep(200)
 ```
 
 ## TODO
