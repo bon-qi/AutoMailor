@@ -90,6 +90,11 @@ The `config_url.json`,
 1. Add a `streamlit` based gui for extraction of `xpath` and `url`.
 2. Support more websites (e.g. twitter)
 
+## Asking for suggestions
+This project is always improving!
+Issue and Pull Requests are welcomed! 
+
+
 ## LICENSE
 
 Currently GPL3.
