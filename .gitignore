@@ -1,7 +1,4 @@
-data/*
-url_pub.py
-imgui.ini
-key_env.sh
+data
 */__pycache__/*
 */.DS_Store
 *egg*
