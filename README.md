@@ -1,4 +1,4 @@
-# The package allow you to monite and send email to any research webpage
+# AutoMailor: monite and notice for academic usages
 
 > Follow the usage below to use it 
 
