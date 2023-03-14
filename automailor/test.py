@@ -3,10 +3,12 @@ import time
 from .mailor import Mailor
 from .monitor import Monitor 
 from .config import Config
+from .utils import default_config
 
 def test():
-    cfg_send = Config("./examples/config_send.json")
-    cfg_url = Config("./examples/config_url.json")
+    cfg_send_path, cfg_url_path = default_config("./config")
+    cfg_send = Config(cfg_send_path)
+    cfg_url = Config(cfg_url_path)
 
     mailor = Mailor(**cfg_send.dict())
     monitor = Monitor(**cfg_url.dict())
