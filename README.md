@@ -1,7 +1,5 @@
 # AutoMailor: monite and notice for academic usages
 
-> Follow the usage below to use it 
-
 ## Installation
 
 ```bash
