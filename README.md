@@ -33,6 +33,11 @@ while True:
     time.sleep(200)
 ```
 
+## Hack
+After any run, the `config_xxx.json` file which define the procedure of spiding, you can editting it.
+
+> Please do not use this SMTP email token for bad usages...
+
 ## TODO
 1. Add a `streamlit` based gui for extraction of `xpath` and `url`.
 2. Support more websites (e.g. twitter)
