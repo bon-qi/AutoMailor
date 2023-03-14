@@ -38,6 +38,8 @@ while True:
     time.sleep(200)
 ```
 
+And now, information related to the webpage (usually publications) were generated in `./data/*` in form of `json` files of `html`.
+
 The code above are integrated into one function
 
 
