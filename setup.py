@@ -7,7 +7,7 @@ setup(
     packages = find_packages(),
     version = '0.0.0', 
     description = 'automailor, a monitor for daily research',
-    license = 'MIT',
+    license = 'GPL3',
     author = 'Qi Zhang',
     author_email = 'qi-001@outlook.com',
     keywords = [

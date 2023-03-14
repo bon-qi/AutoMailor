@@ -40,6 +40,15 @@ while True:
     time.sleep(200)
 ```
 
+The code above are integrated into one function
+
+
+```python
+from automailor.test import test 
+if __name__ == "__main__":
+    test()
+```
+
 ## Hack
 See the `config_xxx.json` files to hack.
 
@@ -83,6 +92,6 @@ The `config_url.json`,
 
 ## LICENSE
 
-Currently for protection, I use GPL3.
+Currently GPL3.
 
 > Please do not use this SMTP email token for unconscious usages.
