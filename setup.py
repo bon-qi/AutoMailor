@@ -20,6 +20,7 @@ setup(
     #],
     install_requires = [
           'arxivscraper',
+          'datetime',
           'requests',
           'json5',
           'lxml'
