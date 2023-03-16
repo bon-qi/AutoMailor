@@ -5,7 +5,7 @@
   "host_server" : "smtp.163.com",
 
   //About sending message
-  "receiver" : ["qi-001@outlook.com"],
+  "receiver" : ["qi-001@outlook.com", "qizhang2002@mail.ustc.edu.cn"],
   "mail_title" : "[automailor] updates from academic community",
   "content_type" : "html"
 
