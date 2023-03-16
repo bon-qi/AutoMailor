@@ -14,11 +14,13 @@ setup(
         'spider',
         'academic research'
     ],
-    include_package_data=True,
+    include_package_data=True, # then using MANIFEST.in
     #data_files = [
     #    ("config/automailor", ["automailor/config/config_url.json", "automailor/config/config_send.json"] )
     #],
     install_requires = [
-      'requests',
+          'requests',
+          'json5',
+          'lxml'
     ]
 )
