@@ -6,7 +6,7 @@ import time
 import arxivscraper
 
 from .dataset import Dataset 
-from .utils import font , get_time
+from .utils import font , get_time, unique
 
 class Monitor(object):
     def __init__(self, url_dict:dict, save_path:str, requests_cfg:dict, arxiv_cfg:dict, **args):
@@ -28,14 +28,14 @@ class Monitor(object):
             info.extend(info_tmp)
             time.sleep(10)
 
-        ret = f"<h2> <span style=\"color:#6A00B8\"> {today} </span> </h2>" 
+        ret = f"<h2> <span style=\"color:#6A00B8\"> Arxiv of {today} : ({len(info)}) updates </span> </h2>" 
         for item in info:
             ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
             ret += f"""
                     <br> <b>{item['title']}</b>
                     <br/> {", ".join(item["authors"])} 
-                    <br/> {", ".join(item["affiliation"])}
-                    <br/> Created ({item['created']}), updated (item['updated']). 
+                    <br/> {", ".join(unique(item["affiliation"]))}
+                    <br/> Created ({item['created']}), updated ({item['updated']}). 
                     <!-- <br/> {item['abstract']} -->
                     <br/> <a href={item['url']}>arxiv</a> 
                     <br/>

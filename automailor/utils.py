@@ -27,6 +27,11 @@ def extra_keys(keys:list, dic:dict):
         ret.append(dic[key])
     return ret
 
+## unique
+def unique(x:list):
+    x = list(set(x))
+    return x
+
 ## get a compact string of time
 def get_time()->str: 
     lt = time.localtime()
