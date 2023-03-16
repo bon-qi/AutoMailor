@@ -16,6 +16,7 @@ on:
 env: 
   GITHUB_NAME: bon-qi
   GITHUB_EMAIL: qi-001@outlook.com
+  
 
 jobs:
   monitor:
@@ -35,11 +36,16 @@ jobs:
       run: 
         python ./tests/test.py
 
+
+   ## Runing push if possible
+    - name: Set env of today
+      run: echo "TODAY=$(date '%d/%m/%y')" >> $GITHUB_ENV
+
     - name: Push daily updates
       uses: github-actions-x/commit@v2.9
       with: 
         github-token: ${{secrets.GITHUB_TOKEN}}
-        commit-message: "[update] today new pub"
+        commit-message: "[update] today (${{env.TODAY}}) new pub"
         files: data/*
         rebase: 'true'
         name: ${{env.GITHUB_NAME}}
