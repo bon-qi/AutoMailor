@@ -31,15 +31,16 @@ class Monitor(object):
         ret = f"<h2> <span style=\"color:#6A00B8\"> Arxiv of {today} : ({len(info)}) updates </span> </h2>" 
         for item in info:
             ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
-            ret += f"""
-                    <br> <b>{item['title']}</b>
-                    <br/> {", ".join(item["authors"])} 
-                    <br/> {", ".join(unique(item["affiliation"]))}
-                    <br/> Created ({item['created']}), updated ({item['updated']}). 
-                    <!-- <br/> {item['abstract']} -->
-                    <br/> <a href={item['url']}>arxiv</a> 
-                    <br/>
-                    """
+            if item['created'] == item['updated']:
+                ret += f"""
+                        <br> <b>{item['title']}</b>
+                        <br/> {", ".join(item["authors"])} 
+                        <br/> {", ".join(unique(item["affiliation"]))}
+                        <br/> Created ({item['created']}), updated ({item['updated']}). 
+                        <!-- <br/> {item['abstract']} -->
+                        <br/> <a href={item['url']}>arxiv</a> 
+                        <br/>
+                        """
         return ret
 
 

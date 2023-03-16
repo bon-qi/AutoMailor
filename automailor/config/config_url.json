@@ -10,7 +10,8 @@
   "arxiv_cfg" :{
     "categories" : {
       "cs" : ["cs.GR", "cs.CV"]
-    }
+    },
+    "filter" : "*"
   },
 
 // "twitter_cfg":{
