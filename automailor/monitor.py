@@ -36,7 +36,7 @@ class Monitor(object):
                     <br/> {", ".join(item["authors"])} 
                     <br/> {", ".join(item["affiliation"])}
                     <br/> Created ({item['created']}), updated (item['updated']). 
-                    <br/> {item['abstract']}
+                    <!-- <br/> {item['abstract']} -->
                     <br/> <a href={item['url']}>arxiv</a> 
                     <br/>
                     """
