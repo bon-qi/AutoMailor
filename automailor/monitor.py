@@ -21,12 +21,12 @@ class Monitor(object):
         today = str(datetime.date.today())
         categories = self.arxiv_cfg['categories']
         info = list() 
-        for k, v in categories.items():
-            scraper = arxivscraper.Scraper(category=k, date_from=today, date_until=today, filters={ 'categories' : v })
+        for key, value in categories.items():
+            scraper = arxivscraper.Scraper(category=key, date_from=today, date_until=today, filters={ 'categories' : value })
             info_tmp = scraper.scrape()
             info.extend(info_tmp)
 
-        ret = f"<h1> Arxiv updates ({today}) </h1>" 
+        ret = f"<h2> <span style=\"color:#6A00B8\"> {today} </span> </h2>" 
         for item in info:
             ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
             pass
