@@ -8,9 +8,9 @@ on:
   push:
     branches:
       - master
-    #schedule:
+    schedule:
     ## '[min] [hour] [day] [month] [weekday]'
-    #- cron: '0 * * * *'
+    - cron: '0 * * * *'
       ## at the begin of every hour
    
 env: 
