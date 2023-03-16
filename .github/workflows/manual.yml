@@ -36,7 +36,7 @@ jobs:
         python ./tests/test.py
 
     - name: Push daily updates
-      use: github-actions-x/commit@v2.9
+      uses: github-actions-x/commit@v2.9
       with: 
         github-token: ${{secrets.GITHUB_TOKEN}}
         commit-message: "[update] today new pub"
