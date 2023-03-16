@@ -35,14 +35,14 @@ jobs:
       run: 
         python ./tests/test.py
 
-#    - name: Push new updates
-#      use: github-actions-x/commit@v2.9
-#      with: 
-#        github-token: ${{secrets.G_T}}
-#        commit-message: "[update] today new pub"
-#        files: tests/*
-#        rebase: 'true'
-#        name: ${{env.GITHUB_NAME}}
-#        email: ${{env.GITHUB_EMAIL}}
+    - name: Push daily updates
+      use: github-actions-x/commit@v2.9
+      with: 
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        commit-message: "[update] today new pub"
+        files: data/*
+        rebase: 'true'
+        name: ${{env.GITHUB_NAME}}
+        email: ${{env.GITHUB_EMAIL}}
 
 
