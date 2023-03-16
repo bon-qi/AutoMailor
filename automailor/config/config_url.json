@@ -9,8 +9,7 @@
 
   "arxiv_cfg" :{
     "categories" : {
-      "eess" : ["eess.SP"],
-      "cs" : ["cs.CG", "cs.CV"]
+      "cs" : ["cs.GR", "cs.CV"]
     }
   },
 

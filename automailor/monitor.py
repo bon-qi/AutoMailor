@@ -2,6 +2,7 @@ import os
 import requests
 from lxml import etree
 import datetime
+import time
 import arxivscraper
 
 from .dataset import Dataset 
@@ -25,12 +26,20 @@ class Monitor(object):
             scraper = arxivscraper.Scraper(category=key, date_from=today, date_until=today, filters={ 'categories' : value })
             info_tmp = scraper.scrape()
             info.extend(info_tmp)
+            time.sleep(10)
 
         ret = f"<h2> <span style=\"color:#6A00B8\"> {today} </span> </h2>" 
         for item in info:
             ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
-            pass
-
+            ret += f"""
+                    <br> <b>{item['title']}</b>
+                    <br/> {", ".join(item["authors"])} 
+                    <br/> {", ".join(item["affiliation"])}
+                    <br/> Created ({item['created']}), updated (item['updated']). 
+                    <br/> {item['abstract']}
+                    <br/> <a href={item['url']}>arxiv</a> 
+                    <br/>
+                    """
         return ret
 
 
@@ -101,19 +110,19 @@ class Monitor(object):
 
 
     def compare(self):
+        message = str() + self._arxiv()
         new_pubs = self._check()
         ## check for new pub
         if new_pubs != dict() and new_pubs != None:
-            message = str()
             for name, pubs in zip(new_pubs.keys(), new_pubs.values()):
                 message += f"<h2> <span style=\"color:#6A00B8\"> {self.url_dict[name]['name']} </span>  <h2>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
                     message += "</br></br>"
             return message
+
         else:
             print(font(f"[INFO {get_time()}]", "yellow"), "no any new pub.")
-
         print("")
-        return None
+        return  message
 
