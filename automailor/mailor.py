@@ -27,7 +27,6 @@ class Mailor(object):
     
         message.attach(MIMEText(mail_content,self.content_type,'utf-8'))
         self.smtp.sendmail(self.sender, self.receiver, message.as_string())  
-        self.quit()      
         status = font(f"[INFO {get_time()}]", "yellow") + f"Sent: [' {mail_content} '] to {self.receiver}"
         return status
 

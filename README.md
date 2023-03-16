@@ -7,7 +7,7 @@ pip install git+https://github.com/bon-qi/AutoMailor.git
 ```
 
 ## Usage
-You can learn the usage from [examples/test.py](./examples/test.py), or see below, 
+You can learn the usage from [tests/test.py](./tests/test.py), or see below, 
 
 First, you need to customize your configuration into json files, luckily it has one to generate by default. 
 

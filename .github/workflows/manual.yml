@@ -8,11 +8,14 @@ on:
   push:
     branches:
       - master
-   
-  #schedule:
+    #schedule:
     ## '[min] [hour] [day] [month] [weekday]'
-   # - cron: '0 * * * *'
-    ## at the begin of every hour
+    #- cron: '0 * * * *'
+      ## at the begin of every hour
+   
+env: 
+  GITHUB_NAME: bon-qi
+  GITHUB_EMAIL: qi-001@outlook.com
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,9 +34,22 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Setup Python environment
-      run: python -m pip install -r ./requirements.txt
-    - name: Setup Keys 
-      run: export SMTP_PWD='UMBHTQFENFWNBBGL'
+      run: | 
+        python -m pip install -r ./requirements.txt
+        python -m pip install .
 
-    - name: Run AutoMailor
-      run: python main.py
+    - name: Run monitor checkout
+      run: |
+        python ./tests/test.py
+
+#    - name: Push new updates
+#      use: github-actions-x/commit@v2.9
+#      with: 
+#        github-token: ${{secrets.G_T}}
+#        commit-message: "[update] today new pub"
+#        files: tests/*
+#        rebase: 'true'
+#        name: ${{env.GITHUB_NAME}}
+#        email: ${{env.GITHUB_EMAIL}}
+
+

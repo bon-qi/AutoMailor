@@ -14,10 +14,10 @@ setup(
         'spider',
         'academic research'
     ],
-    data_files = [
-        "./automailor/config/config_url.json",
-        "./automailor/config/config_send.json"
-    ],
+    include_package_data=True,
+    #data_files = [
+    #    ("config/automailor", ["automailor/config/config_url.json", "automailor/config/config_send.json"] )
+    #],
     install_requires = [
       'requests',
     ]
