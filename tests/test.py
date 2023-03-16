@@ -16,4 +16,5 @@ monitor = Monitor(**cfg_url.dict())
 # compare once
 message = monitor.compare() # str
 if message != None:
-    mailor.send(message)
+    status = mailor.send(message)
+    print(status)
