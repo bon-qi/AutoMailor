@@ -5,9 +5,6 @@ import datetime
 import arxivscraper
 
 from .dataset import Dataset 
-from .mailor import Mailor
-from .config import Config 
-
 from .utils import font , get_time
 
 class Monitor(object):
@@ -19,20 +16,23 @@ class Monitor(object):
         self.arxiv_cfg = arxiv_cfg
         pass
 
+    ## note: arxiv need proxy inside china.
     def _arxiv(self):
-        today = str(datatime.data.today())
-        cats = self.arxiv_cfg['categories']
-        content = dict()
-        for k, v in cats.items():
-            scraper = arxivscraper.Scraper(category=k, data_from=today, data_until=today, 
-                                           filters={
-                                               'categories' : v
-                                               })
+        today = str(datetime.date.today())
+        categories = self.arxiv_cfg['categories']
+        info = list() 
+        for k, v in categories.items():
+            scraper = arxivscraper.Scraper(category=k, date_from=today, date_until=today, filters={ 'categories' : v })
             info_tmp = scraper.scrape()
-            if isinstance(info_tmp, list):
-                for item in temp: 
-                    pass
-        pass
+            info.extend(info_tmp)
+
+        ret = f"<h1> Arxiv updates ({today}) </h1>" 
+        for item in info:
+            ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
+            pass
+
+        return ret
+
 
     def _twitter(self):
         pass
