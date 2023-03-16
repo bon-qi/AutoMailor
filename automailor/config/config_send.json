@@ -5,8 +5,8 @@
   "host_server" : "smtp.163.com",
 
   //About sending message
-  "receiver" : ["2308224300@qq.com"],
-  "mail_title" : "[自动推送] 新的观察",
+  "receiver" : ["qi-001@outlook.com"],
+  "mail_title" : "[automailor] updates from academic community",
   "content_type" : "html"
 
 }

@@ -5,6 +5,12 @@
     "proxies" : "127.0.0.1:7890",
     "header" : "None",
   },
+//  "arxiv_cfg" :{
+// TODO: for arxiv usages
+//  },
+
+// "twitter_cfg":{}
+// TODO: twitter config
   "url_dict" : { 
       "mpi.andreas_geiger" : {
           "name"               : "Andreas Geiger (Max-Plank-Institute for Information)",

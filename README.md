@@ -13,7 +13,8 @@ First, you need to customize your configuration into json files, luckily it has 
 
 ```python
 from automailor import default_config
-default_config("./config") # will make configuration file: ./config/config_url.json ./config/config_send.json
+# will make configuration file: ./config/config_url.json ./config/config_send.json
+default_config("./config") 
 ```
 
 Then, time to use this package.
@@ -88,7 +89,11 @@ The `config_url.json`,
 
 ## TODO
 1. Add a `streamlit` based gui for extraction of `xpath` and `url`.
-2. Support more websites (e.g. twitter)
+2. Support more websites (e.g. twitter, arxiv)
+
+
+## Workflow
+Currently, `github/workflow` is supported to run this everyday.
 
 ## Asking for suggestions
 This project is always improving!
