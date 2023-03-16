@@ -1,6 +1,8 @@
 import os
 import requests
 from lxml import etree
+import datatime
+import arxivscraper
 
 from .dataset import Dataset 
 from .mailor import Mailor
@@ -9,11 +11,30 @@ from .config import Config
 from .utils import font , get_time
 
 class Monitor(object):
-    def __init__(self, url_dict:dict, save_path:str, requests_cfg:dict, **args):
+    def __init__(self, url_dict:dict, save_path:str, requests_cfg:dict, arxiv_cfg:dict, **args):
         self.save_path = save_path
         if not os.path.exists(save_path): os.mkdir(save_path)
         self.url_dict = url_dict
         self.requests_cfg = requests_cfg
+        self.arxiv_cfg = arxiv_cfg
+        pass
+
+    def _arxiv(self):
+        today = str(datatime.data.today())
+        cats = self.arxiv_cfg['categories']
+        content = dict()
+        for k, v in cats.items():
+            scraper = arxivscraper.Scraper(category=k, data_from=today, data_until=today, 
+                                           filters={
+                                               'categories' : v
+                                               })
+            info_tmp = scraper.scrape()
+            if isinstance(info_tmp, list):
+                for item in temp: 
+                    pass
+        pass
+
+    def _twitter(self):
         pass
 
     def init_check(self):
@@ -88,7 +109,7 @@ class Monitor(object):
                 message += f"<h2> <span style=\"color:#6A00B8\"> {self.url_dict[name]['name']} </span>  <h2>  has {len(pubs)} pubs,  </br> </br>"
                 for pub in pubs:
                     message += pub
-                    message += "</br>"
+                    message += "</br></br>"
             return message
         else:
             print(font(f"[INFO {get_time()}]", "yellow"), "no any new pub.")

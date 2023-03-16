@@ -90,6 +90,7 @@ The `config_url.json`,
 ## TODO
 1. Add a `streamlit` based gui for extraction of `xpath` and `url`.
 2. Support more websites (e.g. twitter, arxiv)
+3. Let github update README.md with actions
 
 
 ## Workflow

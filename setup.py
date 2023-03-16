@@ -19,6 +19,7 @@ setup(
     #    ("config/automailor", ["automailor/config/config_url.json", "automailor/config/config_send.json"] )
     #],
     install_requires = [
+          'arxivscraper',
           'requests',
           'json5',
           'lxml'
