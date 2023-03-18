@@ -8,10 +8,11 @@ on:
   push:
     branches:
       - master
+
+on:
   schedule:
     ## '[min] [hour] [day] [month] [weekday]'
-    - cron: '38 12 * * *'
-      ## at the begin of every hour
+    - cron: '41 * * * *'
    
 env: 
   GITHUB_NAME: bon-qi
