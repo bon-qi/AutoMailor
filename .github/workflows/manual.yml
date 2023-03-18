@@ -10,7 +10,7 @@ on:
       - master
   schedule:
     ## '[min] [hour] [day] [month] [weekday]'
-    - cron: '34 20 * * *'
+    - cron: '38 12 * * *'
       ## at the begin of every hour
    
 env: 
