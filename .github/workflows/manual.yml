@@ -22,22 +22,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set up Python3.9
     - uses: actions/setup-python@v2
-
+      with: 
+        python-version: 3.9
     # Runs a single command using the runners shell
     - name: Setup Python environment
       run:  
         python -m pip install .
-
     - name: Run monitor checkout
       run: 
         python ./tests/test.py
-
-
    ## Runing push if possible
-   - name: Get today time
+    - name: Get today time
       run: echo "TODAY=$(date '%d/%m/%y')" >> $GITHUB_ENV
-
     - name: Push daily updates
       uses: github-actions-x/commit@v2.9
       with: 
