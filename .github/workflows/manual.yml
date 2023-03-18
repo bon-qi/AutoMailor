@@ -5,14 +5,12 @@ name: AutoMailor workflow
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  push:
-    branches:
-      - master
-
-on:
+  #  push:
+  #  branches:
+  #    - master
   schedule:
     ## '[min] [hour] [day] [month] [weekday]'
-    - cron: '41 * * * *'
+    - cron: '42 * * * *'
    
 env: 
   GITHUB_NAME: bon-qi
