@@ -18,6 +18,7 @@ class Monitor(object):
         pass
 
     ## note: arxiv need proxy inside china.
+    ## and arxivscraper is not working very stable...
     def _arxiv(self):
         today = str(datetime.date.today())
         categories = self.arxiv_cfg['categories']
@@ -25,9 +26,10 @@ class Monitor(object):
         for key, value in categories.items():
             scraper = arxivscraper.Scraper(category=key, date_from=today, date_until=today, filters={ 'categories' : value })
             info_tmp = scraper.scrape()
+            print(info_tmp)
             info.extend(info_tmp)
             time.sleep(10)
-
+        print(font(f"[ INFO {get_time()}]", 'yellow'), f" Got {len(info)} arxiv update.")
         ret = f"<h2> <span style=\"color:#6A00B8\"> Arxiv of {today} : ({len(info)}) updates </span> </h2>" 
         for item in info:
             ## item: dict ('title', 'id', 'abstract', 'categories', 'created', 'updated', 'authors':list. 'affiliation':list, 'url')
@@ -111,7 +113,7 @@ class Monitor(object):
 
 
     def compare(self):
-        message = str() + self._arxiv()
+        message = str() # + self._arxiv()
         new_pubs = self._check()
         ## check for new pub
         if new_pubs != dict() and new_pubs != None:
