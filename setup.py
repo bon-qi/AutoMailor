@@ -23,6 +23,7 @@ setup(
           'datetime',
           'requests',
           'json5',
+          'tweepy',
           'lxml'
     ]
 )
