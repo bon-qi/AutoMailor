@@ -8,12 +8,9 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
   schedule:
-    ## '[min] [hour] [day] [month] [weekday]'
     - cron: '*/10 * * * *'
+    ## '[min] [hour] [day] [month] [weekday]'
    
 env: 
   GITHUB_NAME: bon-qi
@@ -22,12 +19,12 @@ env:
 
 jobs:
   monitor:
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
-
-    - name: Use Python3.8
-      uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
 
     # Runs a single command using the runners shell
     - name: Setup Python environment
@@ -40,7 +37,7 @@ jobs:
 
 
    ## Runing push if possible
-    - name: Set env of today
+   - name: Get today time
       run: echo "TODAY=$(date '%d/%m/%y')" >> $GITHUB_ENV
 
     - name: Push daily updates
